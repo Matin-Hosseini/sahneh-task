@@ -1,0 +1,53 @@
+@import "./reset.css";
+@import "./primary-styles.css";
+@import "./helpers.css";
+@import "fonts.css";
+
+body {
+  font-family: "yekan";
+  background-color: var(--app-bg);
+}
+
+/* 
+==================================
+Table of content 
+================================== 
+
+1. side bar
+*/
+
+/* side bar starts */
+
+.side-bar-menu__link,
+.side-bar__link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.7rem;
+  padding-right: 1.2rem;
+  font-size: 14px;
+}
+
+.side-bar__link {
+  padding-block: 1.2rem;
+}
+
+.side-bar-menu__link h6 {
+  flex: 1;
+  padding: 1.2rem 0;
+  border-bottom: 0.1px solid #00000013;
+}
+.side-bar-menu__link--active {
+  position: relative;
+  background-color: var(--light-blue);
+}
+.side-bar-menu__link--active::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: var(--blue);
+}
+/* side bar ends */

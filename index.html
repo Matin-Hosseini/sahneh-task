@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--bootstrap-->
+    <link
+      rel="stylesheet"
+      href="assets/vendor/bootstrap-5/dist/css/bootstrap.rtl.min.css" />
+
+    <!--css styles for this page-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-md-4 col-lg-3">
+            <!--side bar starts -->
+            <aside class="rounded-3 side-bar">
+              <div class="side-bar-menu bg-white">
+                <a href="/my-account" class="side-bar-menu__link">
+                  <img src="assets/svg/account.svg" alt="" />
+                  <h6 class="m-0">مشخصات کاربری</h6>
+                </a>
+                <a href="/bank-accounts" class="side-bar-menu__link">
+                  <img src="assets/svg/card.svg" alt="" />
+                  <h6>حساب های بانکی</h6>
+                </a>
+                <a
+                  href="/security"
+                  class="side-bar-menu__link side-bar-menu__link--active">
+                  <img src="assets/svg/lcok.svg" alt="" />
+                  <h6>امنیت</h6>
+                </a>
+                <a href="/settings" class="side-bar-menu__link">
+                  <img src="assets/svg/gear.svg" alt="" />
+                  <h6>تنظیمات</h6>
+                </a>
+                <a href="/price-alerts" class="side-bar-menu__link">
+                  <img src="assets/svg/alarm.svg" alt="" />
+                  <h6>گوش به زنگ ها</h6>
+                </a>
+                <a href="/refferal" class="side-bar-menu__link">
+                  <img src="assets/svg/gift.svg" alt="" />
+                  <h6>دعوت از دوستان</h6>
+                </a>
+                <a href="/api-management" class="side-bar-menu__link">
+                  <img src="assets/svg/code.svg" alt="" />
+                  <h6 class="no-border">مدیریت API</h6>
+                </a>
+              </div>
+              <div>
+                <a href="/help" class="side-bar__link">
+                  <img src="assets/svg/question.svg" alt="" />
+                  <h6>راهنمایی و پشتیبانی</h6>
+                </a>
+              </div>
+            </aside>
+            <!--side bar ends -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/vendor/bootstrap-5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
