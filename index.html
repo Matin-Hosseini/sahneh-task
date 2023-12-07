@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>امنیت</title>
 
     <!--bootstrap-->
     <link
@@ -15,7 +15,7 @@
   </head>
   <body>
     <div id="app">
-      <div class="container">
+      <div class="contain">
         <div class="row my-5">
           <div class="col-md-4 col-lg-3">
             <!--side bar starts -->
@@ -60,6 +60,165 @@
               </div>
             </aside>
             <!--side bar ends -->
+          </div>
+          <div class="col-md-8 col-lg-9">
+            <section class="two-step-verification">
+              <h2 class="title">تأیید صحت دو مرحله‌ای</h2>
+              <p class="subtitle">
+                با کمک تأیید صحت دو مرحله‌ای می‌توانید از دسترسی افراد غیرمجاز
+                به حساب خود جلوگیری کنید.
+              </p>
+
+              <ul class="two-step-verification__items">
+                <li class="two-step-verification__item">
+                  <div>
+                    <h4 class="mb-2">پیامک</h4>
+                    <p class="caption two-step-verification__caption">
+                      دریافت تأیید صحت دو مرحله‌ای از طریق پیامک
+                    </p>
+                  </div>
+
+                  <div class="caption-big phone-number">{{phoneNumber}}</div>
+
+                  <span class="p-2">
+                    <input type="radio" name="" id="" />
+                  </span>
+                </li>
+                <li class="two-step-verification__item">
+                  <div>
+                    <h4 class="mb-2">ایمیل</h4>
+                    <p class="caption two-step-verification__caption">
+                      دریافت تأیید صحت دو مرحله‌ای از طریق ایمیل
+                    </p>
+                  </div>
+
+                  <div></div>
+
+                  <span class="p-2">
+                    <input type="radio" name="" id="" />
+                  </span>
+                </li>
+                <li class="two-step-verification__item">
+                  <div>
+                    <h4 class="mb-2">اپلیکیشن</h4>
+                    <p class="caption two-step-verification__caption">
+                      دریافت کد از طریق اپلیکیشن‌های مانند Google Authenticator
+                    </p>
+                  </div>
+
+                  <div class="caption-big">فعال‌سازی نشده</div>
+
+                  <button class="btn btn-primary word-spacing-0 rounded-pill">
+                    فعال سازی
+                  </button>
+                </li>
+              </ul>
+            </section>
+            <section class="change-password">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h2 class="text-dark-blue fs-sm mb-1">رمز عبور</h2>
+                  <p class="caption">
+                    با استفاده از این گزینه رمز عبور خود را تغییر دهید.
+                  </p>
+                </div>
+                <button class="btn btn-info rounded-pill">
+                  تغییر رمز عبور
+                </button>
+              </div>
+            </section>
+            <section class="connected-devices">
+              <h2 class="title">دستگاه های متصل</h2>
+              <table class="d-table w-100">
+                <thead>
+                  <tr>
+                    <th>
+                      <h4>مدل دستگاه</h4>
+                    </th>
+                    <th>آخرین زمان اتصال</th>
+                    <th>IP</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="assets/svg/desktop.svg" alt="" />
+                        <p class="text-dark-blue fs-sm">
+                          desktop, Windows 10.0, Chrome
+                        </p>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="fs-sm">1402/09/15 13:06:33</p>
+                    </td>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td class="text-end">
+                      <button class="text-danger fs-sm">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <section class="activity-history">
+              <h2 class="title">تاریخچه فعالیت</h2>
+
+              <div
+                class="d-flex align-items-center gap-3 activity-history__btns">
+                <button
+                  class="btn rounded-pill"
+                  :class="{'btn-primary' : isActive('enter')}"
+                  @click="setActive('enter')">
+                  تاریخچه ورود
+                </button>
+                <button
+                  class="btn rounded-pill"
+                  :class="{'btn-primary' : isActive('security-changes')}"
+                  @click="setActive('security-changes')">
+                  تغییرات امنیتی
+                </button>
+              </div>
+
+              <div v-show="isActive('enter')">
+                <table class="w-100">
+                  <thead>
+                    <tr>
+                      <th>دستگاه</th>
+                      <th>زمان</th>
+                      <th>IP</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>WEB - desktop, Windows 10.0, Chrome</td>
+                      <td>1402/09/06 11:08:47</td>
+                      <td>37.98.86.61</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div v-show="isActive('security-changes')">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>زمان</th>
+                      <th>دستگاه</th>
+                      <th>نوع عملیات</th>
+                      <th>IP</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </section>
           </div>
         </div>
       </div>
