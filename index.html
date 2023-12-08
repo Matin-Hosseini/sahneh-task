@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div id="app">
+    <div id="app" v-cloak>
       <div class="contain">
         <div class="row my-5">
           <div class="col-md-4 col-lg-3">
@@ -22,21 +22,8 @@
             <aside class="rounded-3 side-bar">
               <div class="side-bar-menu bg-white">
                 <a href="/my-account" class="side-bar-menu__link">
-                  <!-- <img src="assets/svg/account.svg" alt="" /> -->
-                  <!-- <svg
-                    fill="none"
-                    height="24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-ya7ero"
-                    focusable="false"
-                    aria-hidden="true"
-                    viewBox="0 0 24 24">
-                    <use
-                      xlink:href="assets/svg/alphabet-icons-master.svg#15"></use>
-                  </svg> -->
                   <svg width="24" height="24">
-                    <use xlink:href="./assets/svg/alphabet-svgs.svg#02"></use>
+                    <use :href="svgLink"></use>
                   </svg>
 
                   <h6 class="m-0">مشخصات کاربری</h6>
@@ -242,6 +229,6 @@
 
     <script src="assets/vendor/bootstrap-5/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>

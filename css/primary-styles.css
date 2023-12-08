@@ -23,6 +23,11 @@ body {
   background-color: var(--app-bg);
 }
 
+/* Vue */
+[v-cloak] {
+  display: none;
+}
+
 section {
   background-color: #fff;
   padding: 16px 40px;

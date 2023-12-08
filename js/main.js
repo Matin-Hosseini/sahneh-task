@@ -1,6 +1,7 @@
-const { createApp, reactive, ref } = Vue;
+const { createApp, ref } = Vue;
+import userSvgAlphabetLink from "./utils/userSvgAlphabetLink.js";
 
-createApp({
+const app = createApp({
   setup() {
     const message = ref("matin");
     const phoneNumber = "0912***541";
@@ -15,12 +16,18 @@ createApp({
       return activeTab.value === tab;
     };
 
+    const userName = ref("علی رضایی");
+    const svgLink = userSvgAlphabetLink(userName.value);
+
     return {
       message,
       phoneNumber,
       activeTab,
       setActive,
       isActive,
+      svgLink,
     };
   },
-}).mount("#app");
+})
+
+app.mount("#app");
