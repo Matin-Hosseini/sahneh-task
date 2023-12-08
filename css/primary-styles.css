@@ -1,11 +1,13 @@
-:root{
+:root {
   --app-bg: #f4f7fb;
   --blue: #0c68f4;
   --light-blue: #ebf3ff;
   --border-color: #00000013;
-  --dark-blue: #052B61;
+  --dark-blue: #052b61;
   --gray: #476185;
   --info-btn: #ecf1f9;
+  --alphabet-svg-bg: #e2e9f3;
+  --alphabet-svg-text: var(--dark-blue);
 }
 
 *,
@@ -14,6 +16,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "iran-yekan";
+  background-color: var(--app-bg);
+}
+
+section {
+  background-color: #fff;
+  padding: 16px 40px;
+  border: 1px solid rgb(236, 241, 249);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
 }
 
 a {
@@ -36,13 +51,13 @@ ul li {
   list-style: none;
 }
 
-button{
+button {
   border: 0;
   outline: 0;
   background-color: transparent;
 }
 
-input[type="radio"]{
+input[type="radio"] {
   width: 15px;
   height: 15px;
 }

@@ -3,67 +3,9 @@
 @import "./helpers.css";
 @import "./custom-bs.css";
 @import "./fonts.css";
-
-body {
-  font-family: "yekan";
-  background-color: var(--app-bg);
-}
-
-/* 
-==================================
-Table of content 
-================================== 
-
-1. side bar
-2. two step verification
-*/
-
-/* side bar starts */
-
-.side-bar-menu__link,
-.side-bar__link {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  gap: 0.7rem;
-  padding-right: 1.2rem;
-  font-size: 14px;
-}
-
-.side-bar__link {
-  padding-block: 1.2rem;
-}
-
-.side-bar-menu__link h6 {
-  flex: 1;
-  padding: 1.2rem 0;
-  border-bottom: 0.1px solid var(--border-color);
-}
-.side-bar-menu__link--active {
-  position: relative;
-  background-color: var(--light-blue);
-}
-.side-bar-menu__link--active::before {
-  position: absolute;
-  content: "";
-  width: 4px;
-  height: 100%;
-  right: 0;
-  top: 0;
-  background-color: var(--blue);
-}
-/* side bar ends */
+@import "./modules/side-bar.css";
 
 /* two step verification starts */
-section {
-  background-color: #fff;
-  padding: 16px 40px;
-  border: 1px solid rgb(236, 241, 249);
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
-}
-.two-step-verification {
-}
 .two-step-verification__items {
   margin-top: 2rem;
 }
@@ -87,7 +29,7 @@ input[type="radio"] {
 /* two step verification ends */
 
 /* connected devices starts */
-table{
+table {
   width: 100%;
   margin-top: 1.5rem;
 }
@@ -110,7 +52,7 @@ table tbody td {
 /* connected devices ends */
 
 /* activity history starts */
-.activity-history__btns button{
+.activity-history__btns button {
   background-color: var(--info-btn);
 }
 /* activity history ends */
